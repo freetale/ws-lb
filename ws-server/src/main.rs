@@ -10,7 +10,7 @@ fn main() {
         spawn(move || {
             let usteam = stream.unwrap();
             let addr: std::net::SocketAddr = usteam.peer_addr().unwrap();
-            println!("{}", addr);
+            // println!("{}", addr);
             let mut websocket = accept(usteam).unwrap();
             loop {
                 let msg = match websocket.read() {
