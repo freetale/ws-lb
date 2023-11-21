@@ -1,0 +1,8 @@
+images:
+  - name: locust
+    newName: free17/locust
+    newTag: latest
+resources:
+- deployment-master.yaml
+- deployment-worker.yaml
+- service-master.yaml
