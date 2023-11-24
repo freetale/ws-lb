@@ -1,15 +1,15 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: locust-master
+  name: locust-worker
 spec:
   selector:
     matchLabels:
-      app: locust-master
+      app: locust-worker
   template:
     metadata:
       labels:
-        app: locust-master
+        app: locust-worker
     spec:
       containers:
       - name: locust
