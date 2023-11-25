@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: locust-worker
 spec:
-  replicas: 5
+  replicas: 8
   selector:
     matchLabels:
       app: locust-worker
@@ -24,7 +24,7 @@ spec:
           - locust-master
         resources:
           requests:
-            memory: "128Mi"
+            memory: "512Mi"
             cpu: "2"
           limits:
             {}

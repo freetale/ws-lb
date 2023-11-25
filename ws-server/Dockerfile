@@ -10,4 +10,5 @@ RUN cargo build --release
 FROM debian:buster-slim as runtime
 WORKDIR /app
 COPY --from=builder /app/target/release/ws-server /app/app
+EXPOSE 9001
 ENTRYPOINT ["./app"]

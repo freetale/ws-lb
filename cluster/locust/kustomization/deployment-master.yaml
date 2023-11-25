@@ -23,8 +23,8 @@ spec:
           - ws://host.docker.internal:9001
         resources:
           requests:
-            memory: "128Mi"
-            cpu: "500m"
+            memory: "512Mi"
+            cpu: "2"
           limits:
             {}
         ports:
