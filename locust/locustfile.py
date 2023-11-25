@@ -44,14 +44,14 @@ class QuickstartUser(User):
                 body = ws.recv()
                 response_time =  time.time() - ts
                 
-                self.environment.events.request.fire(
-                    request_type="SendMessage",
-                    name="name",
-                    response_time=response_time,
-                    response_length=len(body),
-                    exception=None,
-                    context=self.context(),
-                )
+                # self.environment.events.request.fire(
+                #     request_type="SendMessage",
+                #     name="name",
+                #     response_time=response_time,
+                #     response_length=len(body),
+                #     exception=None,
+                #     context=self.context(),
+                # )
                 time.sleep(0.1)
         except Exception as e:
             response_time =  time.time() - ts

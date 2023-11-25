@@ -15,9 +15,9 @@ spec:
       - name: ws-server
         image: ws-server
         resources:
-          limits:
-            memory: "128Mi"
-            cpu: "500m"
+          # limits:
+          #   memory: "128Mi"
+          #   cpu: "500m"
           requests:
             memory: "128Mi"
             cpu: "500m"

@@ -1,3 +1,4 @@
-doctl  kubernetes cluster create temp-ws --size s-4vcpu-8gb --count 1 --size c-4 --update-kubeconfig --wait --region sgp1
-scp 
-#doctl kubernetes cluster delete temp-ws
+doctl kubernetes cluster create lb-ingress --count 1 --size s-2vcpu-4gb  --update-kubeconfig --wait --region sgp1
+kubectl apply -k ./kustomization/
+kubectl get svc -w
+#doctl kubernetes cluster delete lb-ingress

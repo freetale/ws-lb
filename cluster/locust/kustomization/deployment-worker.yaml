@@ -3,7 +3,9 @@ kind: Deployment
 metadata:
   name: locust-worker
 spec:
-  replicas: 8
+  replicas: 4
+  strategy:
+    type: Recreate
   selector:
     matchLabels:
       app: locust-worker
@@ -25,7 +27,7 @@ spec:
         resources:
           requests:
             memory: "512Mi"
-            cpu: "2"
+            cpu: "3"
           limits:
             {}
 
