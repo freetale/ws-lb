@@ -14,9 +14,10 @@ spec:
       containers:
       - name: locust
         image: locust
-        command:
+        imagePullPolicy: Always
+        args:
           - -f
-          - /mnt/locust/locustfile.py
+          - ./locustfile.py
           - --master
           - -H
           - ws://host.docker.internal:9001
@@ -28,3 +29,6 @@ spec:
             {}
         ports:
         - containerPort: 8089
+          name: http
+        - containerPort: 5557
+          name: locust

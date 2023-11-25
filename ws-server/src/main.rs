@@ -5,6 +5,7 @@ use tungstenite::accept;
 
 /// A WebSocket echo server
 fn main() {
+    println!("starting");
     let server = TcpListener::bind("0.0.0.0:9001").unwrap();
     for stream in server.incoming() {
         spawn(move || {

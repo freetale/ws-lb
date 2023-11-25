@@ -3,6 +3,7 @@ kind: Deployment
 metadata:
   name: locust-worker
 spec:
+  replicas: 5
   selector:
     matchLabels:
       app: locust-worker
@@ -14,17 +15,17 @@ spec:
       containers:
       - name: locust
         image: locust
-        command:
+        imagePullPolicy: Always
+        args:
           - -f
-          - /mnt/locust/locustfile.py
+          - ./locustfile.py
           - --worker
           - --master-host
           - locust-master
         resources:
           requests:
             memory: "128Mi"
-            cpu: "500m"
+            cpu: "2"
           limits:
             {}
-        ports:
-        - containerPort: 8089
+
