@@ -3,6 +3,8 @@ import websocket
 import time
 
 class QuickstartUser(User):
+    wait_time = between(0.1, 0.5)
+    
     @task
     def hello_world(self):
 
