@@ -6,12 +6,12 @@ images:
     newName: registry.k8s.io/e2e-test-images/agnhost
     newTag: latest
 resources:
-  - https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.8.2/deploy/static/provider/do/deploy.yaml
+  - https://raw.githubusercontent.com/istio/istio/master/manifests/charts/istio-operator/crds/crd-operator.yaml
+  - https://raw.githubusercontent.com/istio/istio/master/manifests/charts/istio-operator/files/gen-operator.yaml
   - https://github.com/cert-manager/cert-manager/releases/download/v1.13.2/cert-manager.yaml
   - cluster-issuer.yaml
-  - service-2.yaml
-  - ingress-2.yaml
-  - deployment-2.yaml
   - ingress.yaml
   - deployment.yaml
   - service.yaml
+  - virtual-service.yaml
+  - certificate.yaml
