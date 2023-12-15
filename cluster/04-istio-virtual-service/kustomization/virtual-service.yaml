@@ -1,13 +1,16 @@
-apiVersion: networking.istio.io/v1beta1
+apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
-  name: reviews-route
+  name: ws-service
 spec:
   hosts:
-  - ws.do.freetale.me
+  - "*"
+  gateways:
+  - ws-gateway
   http:
   - name: "ws-server"
     route:
     - destination:
         host: ws-server
-        subset: v1
+        port:
+          number: 80

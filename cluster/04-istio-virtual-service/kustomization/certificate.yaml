@@ -1,9 +1,0 @@
-apiVersion: cert-manager.io/v1
-kind: Certificate
-metadata:
-  name: ingress-cert
-spec:
-  secretName: ingress-cert
-  commonName: ws.do.freetale.me
-  dnsNames:
-  - ws.do.freetale.me
