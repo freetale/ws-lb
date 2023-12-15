@@ -4,11 +4,14 @@ metadata:
   name: ws-service
 spec:
   hosts:
-  - "*"
+  - ws.do.freetale.me
   gateways:
   - ws-gateway
   http:
   - name: "ws-server"
+    match:
+    - uri:
+        exact: /
     route:
     - destination:
         host: ws-server

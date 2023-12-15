@@ -6,10 +6,12 @@ images:
     newName: registry.k8s.io/e2e-test-images/agnhost
     newTag: latest
 resources:
-  # - https://github.com/cert-manager/cert-manager/releases/download/v1.13.2/cert-manager.yaml
-  # - cluster-issuer.yaml
+  - https://github.com/cert-manager/cert-manager/releases/download/v1.13.2/cert-manager.yaml
+  - cluster-issuer.yaml
+  
   - deployment.yaml
   - service.yaml
+  - certificate.yaml
   - gateway.yaml
   - virtual-service.yaml
 

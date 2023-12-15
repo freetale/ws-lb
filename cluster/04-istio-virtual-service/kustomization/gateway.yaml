@@ -11,4 +11,13 @@ spec:
       name: http
       protocol: HTTP
     hosts:
-    - "*"
+    - ws.do.freetale.me
+  - port:
+      number: 443
+      name: https
+      protocol: HTTPS
+    hosts:
+    - ws.do.freetale.me
+    tls:
+      mode: SIMPLE
+      credentialName: ingress-cert # This should match the Certificate secretName
