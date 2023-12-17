@@ -1,0 +1,14 @@
+images:
+  - name: ws-server
+    newName: free17/ws-server
+    newTag: v2
+resources:
+  - https://github.com/kubernetes-sigs/gateway-api/releases/download/v1.0.0/standard-install.yaml
+  - https://github.com/nginxinc/nginx-gateway-fabric/releases/download/v1.1.0/crds.yaml
+  - https://github.com/nginxinc/nginx-gateway-fabric/releases/download/v1.1.0/nginx-gateway.yaml
+  - https://github.com/cert-manager/cert-manager/releases/download/v1.13.2/cert-manager.yaml
+  - cluster-issuer.yaml
+  - deployment.yaml
+  - service.yaml
+  - gateway.yaml
+  - routes.yaml
