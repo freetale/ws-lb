@@ -1,0 +1,1 @@
+doctl kubernetes cluster delete lb-ingress -f

@@ -8,13 +8,11 @@ images:
 resources:
   - https://github.com/cert-manager/cert-manager/releases/download/v1.13.2/cert-manager.yaml
   - cluster-issuer.yaml
-  
   - deployment.yaml
   - service.yaml
   - certificate.yaml
   - gateway.yaml
   - virtual-service.yaml
-
   # - https://raw.githubusercontent.com/istio/istio/release-1.20/samples/bookinfo/platform/kube/bookinfo.yaml
   # - https://raw.githubusercontent.com/istio/istio/release-1.20/samples/bookinfo/networking/bookinfo-gateway.yaml
   # - https://raw.githubusercontent.com/istio/istio/release-1.20/samples/bookinfo/networking/destination-rule-all.yaml

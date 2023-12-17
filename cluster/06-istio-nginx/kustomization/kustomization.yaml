@@ -1,0 +1,19 @@
+images:
+  - name: ws-server
+    newName: free17/ws-server
+    newTag: v2
+  - name: http-hello
+    newName: registry.k8s.io/e2e-test-images/agnhost
+    newTag: latest
+resources:
+  - https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.8.2/deploy/static/provider/do/deploy.yaml
+  - https://github.com/cert-manager/cert-manager/releases/download/v1.13.2/cert-manager.yaml
+  - cluster-issuer.yaml
+  - deployment.yaml
+  - service.yaml
+  - certificate.yaml
+  - ingress.yaml
+
+  # - https://raw.githubusercontent.com/istio/istio/release-1.20/samples/bookinfo/platform/kube/bookinfo.yaml
+  # - https://raw.githubusercontent.com/istio/istio/release-1.20/samples/bookinfo/networking/bookinfo-gateway.yaml
+  # - https://raw.githubusercontent.com/istio/istio/release-1.20/samples/bookinfo/networking/destination-rule-all.yaml
