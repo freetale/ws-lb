@@ -4,6 +4,8 @@ metadata:
   name: ws-server
   labels:
     name: ws-server
+  annotations:
+        cert-manager.io/cluster-issuer: letsencrypt
 spec:
   ingressClassName: nginx
   rules:
