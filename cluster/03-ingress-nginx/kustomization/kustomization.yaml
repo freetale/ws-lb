@@ -4,7 +4,6 @@ images:
     newTag: v2
 resources:
   - https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.8.2/deploy/static/provider/do/deploy.yaml
-  - cluster-issuer.yaml
   - ingress.yaml
   - deployment.yaml
   - service.yaml

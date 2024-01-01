@@ -20,7 +20,7 @@ use tokio_tungstenite::tungstenite::Result;
 
 #[tokio::main]
 async fn main() -> Result<(), Error> {
-    let _ = env_logger::try_init();
+    env_logger::try_init().unwrap();
     let addr = env::args()
         .nth(1)
         .unwrap_or_else(|| "0.0.0.0:9001".to_string());
@@ -29,7 +29,6 @@ async fn main() -> Result<(), Error> {
     let try_socket = TcpListener::bind(&addr).await;
     let listener = try_socket.expect("Failed to bind");
     info!("Listening on: {}", addr);
-    println!("starting");
 
     while let Ok((stream, _)) = listener.accept().await {
         tokio::spawn(accept_connection(stream));

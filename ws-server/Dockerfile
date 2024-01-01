@@ -11,4 +11,5 @@ FROM debian:buster-slim as runtime
 WORKDIR /app
 COPY --from=builder /app/target/release/ws-server /app/app
 EXPOSE 9001
+ENV RUST_LOG="info"
 ENTRYPOINT ["./app"]

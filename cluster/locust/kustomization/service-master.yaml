@@ -3,7 +3,7 @@ kind: Service
 metadata:
   name: locust-master
 spec:
-  type: LoadBalancer
+  type: ClusterIP
   selector:
     app: locust-master
   ports:
