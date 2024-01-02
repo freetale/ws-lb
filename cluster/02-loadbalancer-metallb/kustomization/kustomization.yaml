@@ -1,0 +1,9 @@
+images:
+  - name: ws-server
+    newName: free17/ws-server
+    newTag: v2
+resources:
+  - metal
+  - deployment.yaml
+  - service.yaml
+  

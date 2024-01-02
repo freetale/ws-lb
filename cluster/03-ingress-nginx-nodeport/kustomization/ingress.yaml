@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ws-server
+  labels:
+    name: ws-server
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: ws.do.freetale.me
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: ws-server
+            port: 
+              number: 80

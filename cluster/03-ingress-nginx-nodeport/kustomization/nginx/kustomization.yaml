@@ -1,0 +1,8 @@
+resources:
+  - https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.8.2/deploy/static/provider/do/deploy.yaml
+patches:
+  - target:
+      namespace: ingress-nginx
+      kind: Service
+      name: ingress-nginx-controller
+    path: service.yaml
